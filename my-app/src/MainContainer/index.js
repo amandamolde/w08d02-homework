@@ -25,10 +25,12 @@ class MainContainer extends Component {
     componentDidMount() {
         this.getNews().then((data) => {
             console.log(data, ' this is data');
-            this.setState({news: data});
+            this.setState({news: data.articles});
+            console.log(this.state.news, ' this is state.news after setState')
         })
     }
     render() {
+        console.log(this.state.news, ' this is state.news')
         return (
             <div>
                 <h1>Main Container</h1>
