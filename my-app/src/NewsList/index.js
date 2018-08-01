@@ -6,14 +6,18 @@ const NewsList = (props) => {
     const newsList = props.news.map((article, i) => {
         return (
             <div>
-                <li key={i}>{article.title}</li>
+                <li key={i}>
+                    <h3>{article.title}</h3>
+                    <h4>By {article.author}</h4>
+                    <p>{article.description}</p>
+                </li>
             </div>
         )
     })
 
     return (
         <div>
-            <h4>Top Headlines</h4>
+            <h1>Top Headlines</h1>
             <ul>
                 {newsList}
             </ul>
