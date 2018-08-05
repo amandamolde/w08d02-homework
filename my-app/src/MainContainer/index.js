@@ -33,7 +33,6 @@ class MainContainer extends Component {
         console.log(this.state.news, ' this is state.news')
         return (
             <div>
-                <h1>Main Container</h1>
                 <NewsList news={this.state.news} />
             </div>
         )
